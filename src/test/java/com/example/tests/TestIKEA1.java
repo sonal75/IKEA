@@ -10,19 +10,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class IKEA1 {
+public class TestIKEA1 {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
   @Before
+  
   public void setUp() throws Exception {
       System.setProperty("webdriver.chrome.driver","c:\\qa\\drivers\\chromedriver.exe");
     driver = new ChromeDriver();
     //driver = new FirefoxDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    //driver.manage().window().maximize();
   }
 
   @Test
